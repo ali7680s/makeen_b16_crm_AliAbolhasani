@@ -8,7 +8,7 @@
 </head>
 <body>
     <div class="form-group row">
-    <h1>edit products</h1>
+    <h1>ویرایش محصول</h1>
 <form action="/products/edit/{{$product->id}}" method="post">
     @csrf
 <input type="text" name="name"value="{{$product->name}}"><br>

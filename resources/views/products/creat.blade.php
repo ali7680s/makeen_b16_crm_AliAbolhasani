@@ -8,7 +8,7 @@
 
 </head>
 <body>
-    <h1>creat products</h1>
+    <h1>ثبت محصول</h1>
 <form action="/products/create" method="post">
     @csrf
 <input type="text" name="name" placeholder="name"><br>

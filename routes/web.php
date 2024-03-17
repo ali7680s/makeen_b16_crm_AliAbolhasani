@@ -40,7 +40,7 @@ Route::post('/users/create', function (Request $request) {
         "phone_number" =>$request->phone_number,
         "password" => $request->password,
     ]);
-return "کاربر با موفقیت ثبت شد";
+    return redirect('/users/index');
 });
 Route::post('/users/edit/{id}', function (Request $request, $id) {
 
@@ -50,7 +50,7 @@ Route::post('/users/edit/{id}', function (Request $request, $id) {
         "phone_number" =>$request->phone_number,
         "password"=>$request->password,
     ]);
-    return "کاربر با موفقیت ویرایش شد";
+    return redirect('/users/index');
 });
 // user delete routes
 Route::delete('/users/delete/{id}',function($id){
@@ -84,7 +84,7 @@ Route::post('/products/create', function (Request $request) {
         "description" =>$request->description,
         "color" => $request->color,
     ]);
-return "product added successfully";
+    return redirect('/products/index');
 });
 Route::post('/products/edit/{id}', function (Request $request, $id) {
 
@@ -94,7 +94,7 @@ Route::post('/products/edit/{id}', function (Request $request, $id) {
         "description" =>$request->description,
         "color"=>$request->color,
     ]);
-    return "product update successfully";
+    return redirect('/products/index');
 });
 // products  delete routes
 Route::delete('/products/delete/{id}',function($id){
@@ -128,7 +128,7 @@ Route::post('/orders/create', function (Request $request) {
         "code_posti" => $request->code_posti,
         "address" => $request->address,
     ]);
-return "sefaresh added successfully";
+return "سفارش با موفقیت ثبت شد";
 });
 Route::post('/orders/edit/{id}', function (Request $request, $id) {
 
@@ -139,7 +139,9 @@ Route::post('/orders/edit/{id}', function (Request $request, $id) {
         "code_posti" => $request->code_posti,
         "address" => $request->address,
     ]);
-    return "order update successfully";
+    return redirect('/orders/index');
+
+
 });
 // orders  delete routes
 Route::delete('/orders/delete/{id}',function($id){

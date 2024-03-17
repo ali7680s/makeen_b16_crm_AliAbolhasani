@@ -12,7 +12,7 @@
 <body>
 
     <div class="container">
-        <h1>لسیت کاربران</h1>
+        <h1>لیست کاربران</h1>
 <table class="table" border="1" style="width: 800px">
     <tr class="table-primary">
         <th>ردیف</th>
@@ -20,7 +20,7 @@
         <th>نام خانوادگی</th>
         <th>شماره موبایل</th>
         <th>رمز عبور</th>
-        <th>manage</th>
+        <th>حذف و ویرایش</th>
     </tr>
     <tr class="table-danger">
         @foreach ( $users as $user)

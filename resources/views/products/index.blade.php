@@ -12,20 +12,22 @@
 <body>
 
     <div class="container">
-        <h1>products list</h1>
+        <h1>لیست محصول</h1>
 <table class="table" border="1" style="width: 800px">
     <tr class="table-primary">
         <th>ID</th>
-        <th>Name</th>
-        <th>Amount</th>
-        <th>Color</th>
-        <th>manage</th>
+        <th>نام محصول</th>
+        <th>قیمت</th>
+        <th>توضیحات</th>
+        <th>رنگ</th>
+        <th>حذف و ویرایش</th>
     </tr>
     <tr class="table-danger">
         @foreach ( $products as $product)
         <td>{{$product->id}}</td>
         <td>{{$product->name}}</td>
         <td>{{$product->amount}}</td>
+        <td>{{$product->description}}</td>
         <td>{{$product->color}}</td>
         <td>
 
