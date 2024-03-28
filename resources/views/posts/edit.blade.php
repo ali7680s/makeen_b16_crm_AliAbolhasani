@@ -12,9 +12,15 @@
     <form action="/posts/edit/{{$post->id}}" method="post">
     @csrf
 <input type="text" name="onvan"value="{{$post->onvan}}"><br>
-<input type="text" name="mozoe"value="{{$post->mozoe}}"><br>
-<input type="" name="tolid"value="{{$post->tolid}}"><br>
-<input type="" name="forosh"value="{{$post->forosh}}"><br>
+{{-- <input type="text" name="mozoe"value="{{$post->mozoe}}"><br> --}}
+<textarea name="mozoe" cols="30" rows="10" placeholder="توضیحات"></textarea><br>
+<select name="tolid">
+    <option value="strategic"{{($post->tolid == "strategic" )? 'selected' : ""}}>استراتژیک</option>
+    <option value="first"{{($post->tolid == "first" )? 'selected' : ""}}>اول شخص</option>
+    <option value="free"{{($post->tolid == "free" )? 'selected' : ""}}>مپ آزاد</option>
+</select><br>
+{{-- <input type="" name="tolid"value="{{$post->tolid}}"><br>
+<input type="" name="forosh"value="{{$post->forosh}}"><br> --}}
 <input type="submit" value="send">
 </div>
 </form>

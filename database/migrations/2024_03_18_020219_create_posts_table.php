@@ -15,8 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('onvan');
             $table->string('mozoe');
-            $table->string('tolid');
-            $table->string('forosh');
+            $table->enum('tolid',['strategic','first','free']);
             $table->timestamps();
         });
     }

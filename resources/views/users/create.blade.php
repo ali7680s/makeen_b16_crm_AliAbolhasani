@@ -14,9 +14,9 @@
     @csrf
     <div class="mb-3 mt-3">
 <input type="text" name="first_name" placeholder="نام"><br>
-@if ($errors ->has('first_name'))
+{{-- @if ($errors ->has('first_name'))
 <li style="color: red">{{$errors->first('first_name')}}</li>
-@endif
+@endif --}}
 <input type="text" name="last_name" placeholder="نام خانوادگی"><br>
 @if ($errors ->has('last_name'))
 <li style="color: red">{{$errors->first('last_name')}}</li>

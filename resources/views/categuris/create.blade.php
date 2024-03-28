@@ -8,14 +8,14 @@
 
 </head>
 <body>
-    <h1>ثبت </h1>
+    <h1>افزودن </h1>
 <form action="/categuris/create" method="post">
     @csrf
-<input type="text" name="dastgah" placeholder="نام دستگاه"><br>
-<input type="" name="mode" placeholder="مدل"><br>
+<input type="text" name="dastgah" placeholder="نام دسته"><br>
+{{-- <input type="" name="mode" placeholder="مدل"><br>
 <input type="" name="fee" placeholder="قیمت"><br>
 <input type="" name="toz" placeholder="توضیحات"><br>
-<input type="" name="foroshgah" placeholder="آدرس فروشگاه"><br>
+<input type="" name="foroshgah" placeholder="آدرس فروشگاه"><br> --}}
 <input type="submit" value="send">
 </form>
 </body>

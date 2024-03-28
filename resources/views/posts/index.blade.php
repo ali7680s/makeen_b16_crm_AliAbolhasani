@@ -16,10 +16,10 @@
 <table class="table" border="1" style="width: 800px">
     <tr class="table-primary">
         <th>ردیف</th>
-        <th>عنوان</th>
-        <th>موضوع</th>
-        <th>تولید</th>
-        <th>فروش در سال</th>
+        <th>مقالات</th>
+        <th>توضیحات</th>
+        <th>دسته بندی</th>
+        {{-- <th>فروش در سال</th>  --}}
         <th> حذف و ویرایش</th>
 
     </tr>
@@ -29,7 +29,7 @@
         <td>{{$post->onvan}}</td>
         <td>{{$post->mozoe}}</td>
         <td>{{$post->tolid}}</td>
-        <td>{{$post->forosh}}</td>
+        {{-- <td>{{$post->forosh}}</td> --}}
         <td>
 
             <a href="/posts/edit/{{$post->id}}">Edit</a> /

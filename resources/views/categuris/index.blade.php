@@ -16,11 +16,11 @@
 <table class="table" border="1" style="width: 800px">
     <tr class="table-primary">
         <th>ردیف</th>
-        <th>نام دستگاه</th>
-        <th>مدل</th>
+        <th>نام دسته</th>
+        {{-- <th>مدل</th>
         <th>قیمت</th>
         <th>توضیحات</th>
-        <th>آدرس فروشگاه</th>
+        <th>آدرس فروشگاه</th> --}}
         <th> حذف و ویرایش</th>
 
     </tr>
@@ -28,10 +28,10 @@
         @foreach ( $categuris as $cate)
         <td>{{$cate->id}}</td>
         <td>{{$cate->dastgah}}</td>
-        <td>{{$cate->mode}}</td>
+        {{-- <td>{{$cate->mode}}</td>
         <td>{{$cate->fee}}</td>
         <td>{{$cate->toz}}</td>
-        <td>{{$cate->foroshgah}}</td>
+        <td>{{$cate->foroshgah}}</td> --}}
         <td>
 
             <a href="/categuris/edit/{{$cate->id}}">Edit</a> /

@@ -12,10 +12,10 @@
     <form action="/categuris/edit/{{$cate->id}}" method="post">
     @csrf
 <input type="text" name="dastgah"value="{{$cate->dastgah}}"><br>
-<input type="text" name="mode"value="{{$cate->mode}}"><br>
+{{-- <input type="text" name="mode"value="{{$cate->mode}}"><br>
 <input type="" name="fee"value="{{$cate->fee}}"><br>
 <input type="" name="toz"value="{{$cate->toz}}"><br>
-<input type="" name="foroshgah"value="{{$cate->foroshgah}}"><br>
+<input type="" name="foroshgah"value="{{$cate->foroshgah}}"><br> --}}
 <input type="submit" value="send">
 </div>
 </form>

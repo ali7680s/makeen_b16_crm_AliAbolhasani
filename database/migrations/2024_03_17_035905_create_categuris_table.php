@@ -14,10 +14,10 @@ return new class extends Migration
         Schema::create('categuris', function (Blueprint $table) {
             $table->id();
             $table->string('dastgah');
-            $table->string('mode');
-            $table->string('fee');
-            $table->string('toz');
-            $table->string('foroshgah');
+            // $table->string('mode');
+            // $table->string('fee');
+            // $table->string('toz');
+            // $table->string('foroshgah');
             $table->timestamps();
         });
     }

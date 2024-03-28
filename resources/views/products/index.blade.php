@@ -1,4 +1,5 @@
 <html dir="rtl" lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,38 +10,39 @@
 
 
 </head>
-<body>
 
+<body>
     <div class="container">
         <h1>لیست محصول</h1>
-<table class="table" border="1" style="width: 800px">
-    <tr class="table-primary">
-        <th>ID</th>
-        <th>نام محصول</th>
-        <th>قیمت</th>
-        <th>توضیحات</th>
-        <th>رنگ</th>
-        <th>حذف و ویرایش</th>
-    </tr>
-    <tr class="table-danger">
-        @foreach ( $products as $product)
-        <td>{{$product->id}}</td>
-        <td>{{$product->name}}</td>
-        <td>{{$product->amount}}</td>
-        <td>{{$product->description}}</td>
-        <td>{{$product->color}}</td>
-        <td>
+        <table class="table" border="1" style="width: 800px">
+            <tr class="table-primary">
+                <th>ID</th>
+                <th>نام محصول</th>
+                <th>قیمت</th>
+                <th>توضیحات</th>
+                <th>رنگ</th>
+                <th>حذف و ویرایش</th>
+            </tr>
+                <tr class="table-danger">
+                    @foreach ($products as $product)
+                    <td>{{ $product->id }}</td>
+                    <td>{{ $product->name }}</td>
+                    <td>{{ $product->amount }}</td>
+                    <td>{{ $product->description }}</td>
+                    <td>{{ $product->color }}</td>
+                    <td>
 
-            <a href="/products/edit/{{$product->id}}">Edit</a> /
-            <form action="/products/delete/{{$product->id}}" method="post">
-                @csrf
-                @method('delete')
-                <input type="submit" value="delete">
-            </form>
-        </td>
-    </tr>
-    @endforeach
-</table>
-</div>
+                        <a href="/products/edit/{{ $product->id }}">Edit</a> /
+                        <form action="/products/delete/{{ $product->id }}" method="post">
+                            @csrf
+                            @method('delete')
+                            <input type="submit" value="delete">
+                        </form>
+                    </td>
+                </tr>
+            @endforeach
+        </table>
+    </div>
 </body>
+
 </html>
