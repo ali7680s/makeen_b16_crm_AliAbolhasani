@@ -9,13 +9,12 @@
 <body>
     <div class="form-group row">
     <h1>ویرایش </h1>
-    <form action="/categuris/edit/{{$cate->id}}" method="post">
+    <form action="/posts/edit/{{$post->id}}" method="post">
     @csrf
-<input type="text" name="dastgah"value="{{$cate->dastgah}}"><br>
-<input type="text" name="mode"value="{{$cate->mode}}"><br>
-<input type="" name="fee"value="{{$cate->fee}}"><br>
-<input type="" name="toz"value="{{$cate->toz}}"><br>
-<input type="" name="foroshgah"value="{{$cate->foroshgah}}"><br>
+<input type="text" name="onvan"value="{{$post->onvan}}"><br>
+<input type="text" name="mozoe"value="{{$post->mozoe}}"><br>
+<input type="" name="tolid"value="{{$post->tolid}}"><br>
+<input type="" name="forosh"value="{{$post->forosh}}"><br>
 <input type="submit" value="send">
 </div>
 </form>

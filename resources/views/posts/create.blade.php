@@ -8,14 +8,13 @@
 
 </head>
 <body>
-    <h1>ثبت </h1>
-<form action="/categuris/create" method="post">
+    <h1>ثبت جدید </h1>
+<form action="/posts/create" method="post">
     @csrf
-<input type="text" name="dastgah" placeholder="نام دستگاه"><br>
-<input type="" name="mode" placeholder="مدل"><br>
-<input type="" name="fee" placeholder="قیمت"><br>
-<input type="" name="toz" placeholder="توضیحات"><br>
-<input type="" name="foroshgah" placeholder="آدرس فروشگاه"><br>
+<input type="text" name="onvan" placeholder="عنوان"><br>
+<input type="" name="mozoe" placeholder="موضوع"><br>
+<input type="" name="tolid" placeholder="تولید"><br>
+<input type="" name="forosh" placeholder="فروش در سال"><br>
 <input type="submit" value="send">
 </form>
 </body>

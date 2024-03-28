@@ -12,30 +12,28 @@
 <body>
 
     <div class="container">
-        <h1>دسته بندی </h1>
+        <h1>مقاله</h1>
 <table class="table" border="1" style="width: 800px">
     <tr class="table-primary">
         <th>ردیف</th>
-        <th>نام دستگاه</th>
-        <th>مدل</th>
-        <th>قیمت</th>
-        <th>توضیحات</th>
-        <th>آدرس فروشگاه</th>
+        <th>عنوان</th>
+        <th>موضوع</th>
+        <th>تولید</th>
+        <th>فروش در سال</th>
         <th> حذف و ویرایش</th>
 
     </tr>
     <tr class="table-danger">
-        @foreach ( $categuris as $cate)
-        <td>{{$cate->id}}</td>
-        <td>{{$cate->dastgah}}</td>
-        <td>{{$cate->mode}}</td>
-        <td>{{$cate->fee}}</td>
-        <td>{{$cate->toz}}</td>
-        <td>{{$cate->foroshgah}}</td>
+        @foreach ( $posts as $post)
+        <td>{{$post->id}}</td>
+        <td>{{$post->onvan}}</td>
+        <td>{{$post->mozoe}}</td>
+        <td>{{$post->tolid}}</td>
+        <td>{{$post->forosh}}</td>
         <td>
 
-            <a href="/categuris/edit/{{$cate->id}}">Edit</a> /
-            <form action="/categuris/delete/{{$cate->id}}" method="post">
+            <a href="/posts/edit/{{$post->id}}">Edit</a> /
+            <form action="/posts/delete/{{$post->id}}" method="post">
                 @csrf
                 @method('delete')
                 <input type="submit" value="delete">

@@ -12,7 +12,13 @@
 <form action="/products/create" method="post">
     @csrf
 <input type="text" name="name" placeholder="name"><br>
+@if ($errors ->has('name'))
+<li style="color: red">{{$errors->first('name')}}</li>
+@endif
 <input type="number" name="amount" placeholder="amount"><br>
+@if ($errors ->has('amount'))
+<li style="color: red">{{$errors->first('amount')}}</li>
+@endif
 <textarea name="description" cols="30" rows="10" placeholder="description"></textarea><br>
 <select name="color">
     <option value="black">black</option>
