@@ -19,20 +19,20 @@ class UserController extends Controller
 
     }
 
-    public function createPost(CreateUserRequest $request){
-        DB::table('users')->insert([$request->except('_token')]);
-        return redirect(route('users.index'));
-    }
-    public function editpost(EditUserRequest $request , $id){
-        DB::table('users')->where('id , $id')->update([
-            "first_name" => $request->first_name,
-            "last_name" =>$request->last_name,
-            "phone_number" =>$request->phone_number,
-            "password"=>$request->password,
+    // public function createPost(CreateUserRequest $request){
+    //     DB::table('users')->insert([$request->except('_token')]);
+    //     return redirect(route('users.index'));
+    // }
+    // public function editpost(EditUserRequest $request , $id){
+    //     DB::table('users')->where('id , $id')->update([
+    //         "first_name" => $request->first_name,
+    //         "last_name" =>$request->last_name,
+    //         "phone_number" =>$request->phone_number,
+    //         "password"=>$request->password,
 
-        ]);
-        return redirect(route('users.index'));
-    }
+    //     ]);
+    //     return redirect(route('users.index'));
+    // }
     public function delete($id){
         DB::table('users')->where('id',$id)->delete();
         return redirect(route('users.index'));
@@ -49,3 +49,4 @@ class UserController extends Controller
     }
 
 }
+//salam khobi chetori haji miseh biay pisham berim 
